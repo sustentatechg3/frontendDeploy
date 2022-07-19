@@ -1,0 +1,103 @@
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="card col-12 text-center justify-content-center m-1 my-3">
+            <h1>{{produto.categoria.tipo}}</h1>
+        </div>
+        <div class="col">
+
+            <div class="row">
+                <div class="card col-6 text-center justify-content-center m-1 my-3">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{produto.foto}}" alt="Card image cap">
+
+                    </div>
+
+                </div>
+                <div class="col mt-3 ml-3">
+                    <h5 class="card-title m-0">{{produto.nome}}</h5>
+                    <p class="mt-5">Descrição: </p>
+                    <p class="card-text mt-0"> {{produto.descricao}}</p>
+                    <p class="card-text mt-3">{{produto.valor | currency}}</p>
+                    <div class="row ml-1">
+                        <div>
+                            <label for="">Quantidade: </label>
+                            <input class="form-control ml-0" [(ngModel)]="quantidade" type="number" style="width: 75px;"
+                                min="1" max="99">
+                        </div>
+
+                        <div class="mt-4 ml-3">
+                            <button type="button" class="btn btn-success btn-md"
+                                (click)="addAoCarrinho(produto.id, quantidade-1)">Adicionar
+                                ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <button type="button " class="btn btn-danger btn-md" routerLink="/inicio">comprar mais
+                            produtos</button>
+                    </div>
+
+                    <div class="mt-2">
+                        <button type="button " class="btn btn-danger btn-md" routerLink="/carrinho">ir para o
+                            carrinho</button>
+                    </div>
+
+                    <div class="col mt-5">
+                        <h5>Ao comprar esse produto você estará ajudando: </h5>
+                        <h3>{{produto.usuario.nome}}</h3>
+                        <div class=" card-body my-2">
+                            <img class="card-img-top" src="{{produto.usuario.foto}}" alt="Card image cap">
+                            
+            
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="row">
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="card col-xl-2 col-lg-2 col-md-3 col-sm-12 d-flex align-items-strech text-center justify-content-center m-1 my-1"
+                    *ngFor="let prod of listaProdutosSemelhantes">
+                    <div class="card-body">
+                        <!-- <img class="card-img-top" src="{{prod.foto}}" alt="Card image cap"> -->
+                        <h5 class="card-title m-0">{{prod.nome}}</h5>
+                        <!-- <p class="card-text mt-3">{{prod.descricao}}</p>
+                            <p class="card-text mt-3">{{prod.valor  | currency}}</p> -->
+                    </div>
+                    <button type="button" class="btn btn-danger btn-md"
+                        [routerLink]="['/produto-selecao', prod.id]">comprar</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- <div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h5>Ao comprar esse produto você estará ajudando: {{produto.usuario.nome}}</h5>
+        </div>
+        <div class="col">
+            {{produto.usuario.foto}}
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,13 @@
+.banner {
+    border-radius: 4%;
+}
+
+.botao{
+    position: absolute;
+    left: 1350px;
+    bottom: 100px;
+    top: 780px;
+    border-radius: 10%;
+    width: 200px; height: 200px
+    
+ }

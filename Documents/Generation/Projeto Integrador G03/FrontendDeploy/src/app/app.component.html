@@ -1,0 +1,6 @@
+<div style="min-width: 372px;">
+        <app-navbar-navegacao *ngIf='auth.logado()'></app-navbar-navegacao>
+        <app-menu *ngIf='auth.deslogado()' ></app-menu>
+    <router-outlet ></router-outlet>
+    <app-rodape></app-rodape>
+</div>

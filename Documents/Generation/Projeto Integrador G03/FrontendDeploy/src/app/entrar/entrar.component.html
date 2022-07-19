@@ -1,0 +1,65 @@
+<div id="b-bg">
+    <div class="container-fluid">
+
+        <div class="row d-flex align-items-end">
+            <div class="col-md-2">
+            <img src="https://i.imgur.com/t4HkTCh.png" width="150px" height="150px" alt="Logo da empresa">
+            </div>
+        </div>
+
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12">
+                
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6">
+                        
+                        <h1 class="text-center  text-white fonte">Entrar</h1>
+                        <hr>
+
+                        <div class="card mt-3 mb-5">
+                            <div class="card-body">
+
+                                    <h2 class="text-center m-5 mb-2 text-black-50 fonte">Faça login:</h2>
+
+                                <div class="form-group text-black-50 fonte">
+                                    <label for="usuario">Usuário:</label>
+                                    <input [(ngModel)]="usuarioLogin.usuario" class="form-control"       type="text" name="usuario" id="usuario"  placeholder="Seu Usuário">              
+                                </div>
+
+                                <div class="form-group text-black-50 fonte">
+                                    <label for="senha">Senha:</label>
+                                    <input [(ngModel)]="usuarioLogin.senha" class="form-control" type="password" name="senha" id="senha"
+                                        placeholder="Sua senha">
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn text-black-50 fonte" id="bt-color"
+                                        (click)='entrar()'>Entrar</button>
+                                </div>
+
+                                <hr class="mt-5 mb-lg-5">
+
+                                <p class="text-center">
+                                    Não tem uma conta? <a routerLink="/cadastrar" id="link-color">Cadastre-se</a>
+                                </p>
+
+
+
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
+

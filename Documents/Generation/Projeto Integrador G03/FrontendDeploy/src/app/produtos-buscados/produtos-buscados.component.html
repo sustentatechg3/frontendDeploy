@@ -1,0 +1,35 @@
+<p>produto-selecao works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Vegetais</h1>
+        </div>
+        <div class="col">
+
+            <div class="row">
+                <div class="card col-6 text-center justify-content-center m-1 my-1"
+                    *ngFor="let produto of listaProdutosBuscados">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{produto.foto}}" alt="Card image cap">
+
+                    </div>
+
+
+
+                    <h5 class="card-title m-0">{{produto.nome}}</h5>
+                    <p class="card-text mt-3">{{produto.descricao}}</p>
+                    <p class="card-text mt-3">{{produto.valor}}</p>
+                    <!-- <div >
+                        <label for="">Quantidade</label>
+                        <input type="number">x
+                    </div> -->
+
+                    <button type="button" class="btn btn-danger btn-md"
+                        [routerLink]="['/produto-selecao', produto.id]">comprar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

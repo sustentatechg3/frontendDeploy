@@ -1,0 +1,99 @@
+<div class="container my-5">
+    <div class="text-center my-5">
+        <h1>Carrinho de Compras</h1>
+    </div>
+</div>
+
+<!-- ---------- lista de itens --------- -->
+<div class="container my-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10 mb-4">
+
+            <div class="card card-body">
+                <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row"
+                    *ngFor="let item of lista2; let p = index">
+                    <div class="mr-2 mb-3 mb-lg-0">
+                        <!-- {{p}} -->
+
+
+                        <img src={{item.foto}} width="150px" height="150px" class="img-fluid rounded-circle mb-3">
+
+                    </div>
+
+                    <div class="media-body">
+                        <h6 class="media-title font-weight-semibold">
+                            <a href="" data-abc="true"></a>
+                        </h6>
+
+                        <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+                            <li class="list-inline-item"><a href="#" class="text-muted"
+                                    data-abc="true">{{item.nome}}</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-muted"
+                                    data-abc="true">{{item.categoria.tipo}}</a></li>
+                        </ul>
+
+                        <p class="mb-3">{{item.descricao}}</p>
+
+                    </div>
+
+                    <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+                        <h3 class="mb-2 fonte">{{item.valor | currency}}</h3>
+
+
+                        <button class="btn btn-danger mr-3" (click)="removerProduto(p)">Remover</button>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ---------- lista de itens --------- -->
+
+<div class="container  mb-5">
+    <div class="row">
+        <div class="col ml-5">
+            <h5 class="ml-2">Valor Total a pagar: {{valorTotal | currency}} </h5>
+        </div>
+        <div class="col">
+            <button class="btn btn-info ml-2" routerLink="/inicio">Continuar comprando <i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+        </div>
+        <div class="col">
+            <button class="btn btn-success" (click)="compraRealizada()" routerLink="/inicio">Finalizar pedido <i class="fa fa-shopping-bag" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- ---------- lista de vendedores --------- -->
+
+<div class="container mb-5">
+    <div class="row ml-3">
+        <h3>Ao comprar esses produtos, você estará ajudando as seguintes entidades:</h3>
+
+        
+
+        <div class="card col-2 text-center justify-content-center m-1 my-3" *ngFor="let vendedores of listaVendedoresFiltrada">
+            <div class="card-heade">
+                {{vendedores.nome}}
+            </div>
+            <div class=" card-body">
+                <img class="card-img-top" src="{{vendedores.foto}}" alt="Card image cap">
+                
+
+            </div>
+            <div class="mt-1 mb-2">
+                <button  class="btn btn-info">Incentivar <i class="fa fa-smile-o" aria-hidden="true"></i></button>
+            </div>
+            <div class="mt-1 mb-1">
+                <button class="btn btn-info">Doar <i class="fa fa-gratipay" aria-hidden="true"></i></button>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,56 @@
+
+#img-bg {
+    background-image: url('https://i.imgur.com/wchCQXV.png');
+}
+
+#bg-color {
+
+    background-color: #c5f094;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#bt-color {
+
+    background-color:#92f027 !important;
+
+    
+}
+
+
+#link-color {
+    color: #92f027 !important;
+}
+
+.fonte {
+
+
+    font-family: monospace;
+}
+
+
+.p {
+    border: 1px solid transparent;
+
+
+    background-color: white;
+    width: 500px;
+    height: 50%;
+    margin: 0 auto;
+
+
+}
+
+#b-bg {
+    background-image: url();
+    min-height: 90vh;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%, 27%, 23%;
+    background-color: #c5f094;
+    border-radius: 2%;
+
+
+}

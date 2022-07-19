@@ -1,0 +1,49 @@
+.bg-color {
+    background-color: #6ab04c;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+
+}
+
+:root {
+    --terroso0: #6ab04c OU #93842f OU #696b46 OU #394736;
+    --terroso1: #320606 OU #ac8d49;
+    --terroso2: #b33939 OU #7d1a0c;
+    --terroso3: #cc8e35 OU #cf872e;
+    --terroso4: #ffbe76;
+    --terroso5: #FDA7DF;
+}
+
+table {
+    border-collapse:separate;
+}
+
+table {border: 0px; border-spacing: 10px; border-collapse: collapse;}
+table td{border: 1px solid rgb(255, 255, 255); text-align: center; padding: 5px; margin: 0px}
+
+tr {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+.container-fluid{
+    height: 100%;
+
+  padding: 0px;
+}
+td:hover{
+    color: white ;
+}
+.bg-card{
+    background-color: white;
+}
+.inicio{
+    background-color: #6ab04c;
+}
+h1{
+    font-family: 'Koulen', cursive;
+}
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');

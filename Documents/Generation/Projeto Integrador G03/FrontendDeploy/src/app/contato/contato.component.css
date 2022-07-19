@@ -1,0 +1,37 @@
+body {
+    background-color: #f8c291;
+}
+
+
+#bt-color {
+
+    background-color:#92f027 !important;
+
+    
+}
+
+#bg-color {
+
+    background-color: #eeba7a;
+    font-family: monospace;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#b-bg {
+    background-image: url();
+    min-height: 90vh;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%, 27%, 23%;
+    background-color: #c5f094;
+    border-radius: 2%;
+
+}
+
+.fonte {
+
+    font-family: monospace;
+
+}

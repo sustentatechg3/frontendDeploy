@@ -1,0 +1,125 @@
+<div *ngIf="usuario.tipo != 'normal'" class="conteiner">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4 mt-4 mb-4">
+
+
+
+            <div class="form-group">
+                <label for="">Nome</label>
+                <input [(ngModel)]="produto.nome" class="form-control" type="text">
+                <small></small>
+            </div>
+            <div class="form-group">
+                <label for="">Descrição</label>
+                <input [(ngModel)]="produto.descricao" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Foto</label>
+                <input [(ngModel)]="produto.foto" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Valor</label>
+                <input [(ngModel)]="produto.valor" class="form-control" type="number">
+            </div>
+
+            <hr>
+
+            <div class="form-group text-center">
+                <label for="">Categoria<a *ngIf="usuario.tipo == 'adm'" routerLink="/cadastrar-categoria">ou criar uma
+                        nova</a></label>
+                <select [(ngModel)]="idCategoria" (change)="findByIdCategoria()" class="form-control ls-select
+                " name="categoria" id="categoria" placeholder="escolha...">
+                    <option disabled selected>Selecione...</option>
+                    <option *ngFor="let cat of listaCategorias" value="{{cat.id}}">{{cat.tipo}}</option>
+                </select>
+
+
+            </div>
+
+
+
+
+            <div class="d-flex justify-content-center">
+                <button type="reset" class="btn btn-danger mr-3">Limpar</button>
+                <button type="submit" class="btn btn-success" (click)="cadastrar()">Enviar</button>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+
+
+        </div>
+    </div>
+
+</div> -->
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------exibe os produtos ------------ -->
+
+<div class="container d-flex justify-content-center mt-5 mb-5">
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10 mb-4">
+
+            <div class="card card-body">
+                <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row"
+                    *ngFor="let item of listaUsuario.produto">
+                    <div class="mr-2 mb-3 mb-lg-0">
+
+
+
+                        <img src={{item.foto}} width="150px" height="150px" class="img-fluid rounded-circle mb-3">
+
+                    </div>
+
+                    <div class="media-body">
+                        <h6 class="media-title font-weight-semibold">
+                            <a href="" data-abc="true"></a>
+                        </h6>
+
+                        <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+                            <li class="list-inline-item"><a href="#" class="text-muted"
+                                    data-abc="true">{{item.nome}}</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-muted"
+                                    data-abc="true">{{item.categoria.tipo}}</a></li>
+                        </ul>
+
+                        <p class="mb-3">{{item.descricao}}</p>
+                        <h3 class="mb-2 fonte">R$ {{item.valor}}</h3>
+
+
+                    </div>
+
+                    <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+
+
+                        <button class="btn btn-danger mr-3 mb-3"
+                            [routerLink]="['/produto-delete', item.id]">Apagar</button>
+                        <button class="btn btn-info" [routerLink]="['/produto-edit', item.id]">Editar</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
